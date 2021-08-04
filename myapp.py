@@ -6,6 +6,8 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 st.write("""
 # Boston House Price Prediction App
 
@@ -101,7 +103,7 @@ model.fit(X, Y)
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 
-st.header('Prediction of MEDV')
+st.header('Prediction of MEDV: Median value of owner-occupied homes in $1000\'s')
 st.write(prediction)
 st.write('---')
 
